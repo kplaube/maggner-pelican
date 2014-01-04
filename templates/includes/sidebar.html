@@ -1,0 +1,13 @@
+{% if SOCIAL %}
+    <section class="module social">
+        <h3 class="title module-title">Social</h3>
+
+        <ul>
+            {% for name, link in SOCIAL %}
+                <li>
+                    <a href="{{ link }}">{{ name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endif %}

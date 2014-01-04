@@ -1,0 +1,15 @@
+<nav class="menu">
+    <ul>
+        <li>
+            <a href="{{ SITEURL }}/index.html" title="Blog">Blog</a>
+        </li>
+
+        {% if DISPLAY_PAGES_ON_MENU != False %}
+            {% for p in pages %}
+                <li>
+                    <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+</nav>

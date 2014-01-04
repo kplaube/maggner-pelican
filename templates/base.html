@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html lang="{{ DEFAULT_LANG }}" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{{ SITESUBTITLE }}{% endblock %} | {% block sitename %}{{ SITENAME }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+    <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.7.1.min.js"></script>
+</head>
+<body>
+<div id="page">
+    <header class="header">
+        <h1><a href="{{ SITEURL }}/index.html" title="Página inicial">{{ SITENAME }}</a></h1>
+        <h2>{{ SITESUBTITLE }}</h2>
+
+        <a href="#"><img src="{{ SITEURL }}/theme/img/ad.png" alt="Ad"></a>
+
+        {% include "includes/menu.html" %}
+    </header>
+
+    <section class="content">
+        {% block content %}{% endblock %}
+    </section>
+
+    <aside class="sidebar">
+        {% include "includes/sidebar.html" %}
+    </aside>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ SITEURL }}/theme/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+    <script src="{{ SITEURL }}/theme/js/main.js" async="true"></script>
+
+    {% if GOOGLE_ANALYTICS %}
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','{{ GOOGLE_ANALYTICS }}');ga('send','pageview');
+        </script>
+    {% endif %}
+</div>
+</body>
+</html>
