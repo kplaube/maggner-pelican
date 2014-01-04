@@ -1,0 +1,11 @@
+{
+  "name": "maggner-pelican",
+  "description": "A modification of Maggner theme for Pelican",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-cli": "~0.1.11"
+  }
+}
