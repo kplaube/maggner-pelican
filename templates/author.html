@@ -1,0 +1,11 @@
+{% extends "base_article_list.html" %}
+
+{% block title %}Posts de {{ author }}{% endblock %}
+
+{% block content %}
+
+    <h1 class="page-title">Posts de {{ author }}</h1>
+
+    {{ super() }}
+
+{% endblock content %}

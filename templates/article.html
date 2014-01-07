@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+
+    {% set show_complete = true %}
+    {% include "includes/article.html" %}
+
+{% endblock content %}

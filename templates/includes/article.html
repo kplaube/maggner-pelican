@@ -1,0 +1,45 @@
+<article class="entry">
+
+    <header>
+        <h1 class="entry-title">
+            <a href="{{ SITEURL }}/{{ article.url }}" title="Leia o post completo">
+                {{ article.title }}</a>
+        </h1>
+
+        <p class="publication-date">
+            <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+        </p>
+
+        {% if article.author %}
+        <p class="author">
+            <span></span>
+            <a href="{{ SITEURL }}/{{ article.author.url }}" title="Leia mais posts de {{ article.author }}">{{ article.author }}</a>
+        </p>
+        {% endif %}
+
+        {% if article.tags %}
+        <p class="tags">
+            <span></span>
+            {% for tag in article.tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}" title="Leia mais sobre {{ tag }}">{{ tag }}</a> 
+            {% endfor %}
+        </p>
+        {% endif %}
+    </header>
+
+    <div class="entry-content">
+        {% if show_complete %}
+            {{ article.content }}
+        {% else %}
+            {{ article.summary }}
+        {% endif %}
+    </div>
+
+    {% if not show_complete %}
+        <footer>
+            <a href="{{ SITEURL }}/{{ article.url }}" title="Leia o post completo">Leia mais</a>
+        </footer>
+    {% endif %}
+
+</article>
+<!-- /.entry -->
