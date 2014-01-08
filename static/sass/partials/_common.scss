@@ -1,0 +1,17 @@
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+  font-family: $font-family;
+}
+
+body {
+  background: $background-color;
+  color: $font-color;
+  font-size: 14px;
+}
+
+a { text-decoration: none; }
+
+.secondary {
+  color: $secondary-color;
+}

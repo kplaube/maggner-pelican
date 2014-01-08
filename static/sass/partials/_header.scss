@@ -1,0 +1,29 @@
+@import "compass/css3";
+
+.header h1 { margin: 0; }
+
+.logo {
+  color: $primary-color;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.ad { display: none; }
+
+.pure-menu.menu {
+  background: $primary-color;
+
+  a {
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 8px 20px;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
