@@ -1,0 +1,77 @@
+@import "compass/css3";
+
+.entry-author,
+.entry-content { padding-right: 10px; }
+
+.entry {
+  background: white;
+  border: 1px solid #cdcdcd;
+  margin-bottom: 20px;
+  padding: 20px 20px 40px 20px;
+  position: relative;
+
+  img {
+    border: 4px solid #dcdcdc;
+    width: 30%;
+  }
+}
+
+.entry-date {
+  background: $secondary-color;
+  color: white;
+  font-size: 12px;
+  left: 22px;
+  line-height: 25px;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  width: 100px;
+}
+
+.entry-title {
+  color: #333;
+  font-size: 24px;
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+.entry-title-link {
+  @include transition(all 0.25s linear 0s);
+
+  &, &:visited {
+    @extend .entry-title;
+  }
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.meta {
+  margin: 0;
+  line-height: 20px;
+}
+
+.meta-link {
+  color: #999;
+  font-size: 14px;
+}
+
+
+.entry-read-more {
+  @include transition(all 0.25s linear 0s);
+
+  background: $secondary-color;
+  bottom: 10px;
+  color: white;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 5px 10px;
+  position: absolute;
+  right: 10px;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+  }
+}

@@ -2,29 +2,33 @@
 
     <header>
         <h1 class="entry-title">
-            <a href="{{ SITEURL }}/{{ article.url }}" title="Leia o post completo">
+			<a href="{{ SITEURL }}/{{ article.url }}" title="Leia o post completo" class="entry-title-link">
                 {{ article.title }}</a>
         </h1>
 
-        <p class="publication-date">
+        <div class="entry-date">
             <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-        </p>
+        </div>
 
-        {% if article.author %}
-        <p class="author">
-            <span></span>
-            <a href="{{ SITEURL }}/{{ article.author.url }}" title="Leia mais posts de {{ article.author }}">{{ article.author }}</a>
-        </p>
-        {% endif %}
+		{% if article.author and article.tags %}
+		<div class="entry-meta">
+			{% if article.author %}
+			<span class="meta entry-author">
+				<span class="icons icons-author"></span>
+				<a href="{{ SITEURL }}/{{ article.author.url }}" title="Leia mais posts de {{ article.author }}" class="meta-link">{{ article.author }}</a>
+			</span>
+			{% endif %}
 
-        {% if article.tags %}
-        <p class="tags">
-            <span></span>
-            {% for tag in article.tags %}
-                <a href="{{ SITEURL }}/{{ tag.url }}" title="Leia mais sobre {{ tag }}">{{ tag }}</a> 
-            {% endfor %}
-        </p>
-        {% endif %}
+			{% if article.tags %}
+			<span class="meta entry-tags">
+				<span class="icons icons-category"></span>
+				{% for tag in article.tags %}
+					<a href="{{ SITEURL }}/{{ tag.url }}" title="Leia mais sobre {{ tag }}" class="meta-link">{{ tag }}</a> 
+				{% endfor %}
+			</span>
+			{% endif %}
+		</div>
+		{% endif %}
     </header>
 
     <div class="entry-content">
@@ -37,7 +41,7 @@
 
     {% if not show_complete %}
         <footer>
-            <a href="{{ SITEURL }}/{{ article.url }}" title="Leia o post completo">Leia mais</a>
+            <a href="{{ SITEURL }}/{{ article.url }}" title="Leia o post completo" class="entry-read-more">Leia mais</a>
         </footer>
     {% endif %}
 
