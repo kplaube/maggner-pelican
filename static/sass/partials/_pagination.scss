@@ -1,0 +1,21 @@
+@import "compass/css3";
+
+.pagination {
+  margin-bottom: 20px;
+  text-align: center;
+
+  a {
+    @extend .box;
+    @include inline-block;
+
+    color: #333;
+    margin-left: 10px;
+    padding: 5px 10px;
+
+    &:first-child { margin-left: 0; }
+    &:hover {
+      background: $primary-color;
+      color: white;
+    }
+  }
+}

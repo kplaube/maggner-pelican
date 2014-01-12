@@ -29,9 +29,25 @@ p {
 	text-align: justify;
 }
 
-.secondary {
-  color: $secondary-color;
+.align-left {
+	float: left;
+	margin: 0 20px 10px 0;
 }
+
+.box {
+  background: white;
+  border: 1px solid #cdcdcd;
+}
+
+.box-content {
+  @extend .box;
+
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.clearfix { clear: both; }
 
 .icons {
 	@include inline-block;
@@ -40,7 +56,6 @@ p {
 	width: 16px;
 }
 
-.align-left {
-	float: left;
-	margin: 0 20px 10px 0;
+.secondary {
+  color: $secondary-color;
 }

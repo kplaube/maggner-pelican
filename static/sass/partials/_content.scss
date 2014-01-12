@@ -4,17 +4,15 @@
 .entry-content { padding-right: 10px; }
 
 .entry {
-  background: white;
-  border: 1px solid #cdcdcd;
-  margin-bottom: 20px;
-  padding: 20px 20px 40px 20px;
-  position: relative;
+  @extend .box-content;
 
   img {
     border: 4px solid #dcdcdc;
     width: 30%;
   }
 }
+
+.entry-header { margin-bottom: 20px; }
 
 .entry-date {
   background: $secondary-color;
@@ -36,7 +34,7 @@
 }
 
 .entry-title-link {
-  @include transition(all 0.25s linear 0s);
+  @include transition(background 0.25s linear 0s);
 
   &, &:visited {
     @extend .entry-title;
@@ -57,18 +55,22 @@
   font-size: 14px;
 }
 
+.entry-content a {
+  color: $secondary-color;
+
+  &:hover { color: $primary-color; }
+}
 
 .entry-read-more {
-  @include transition(all 0.25s linear 0s);
+  @include transition(background 0.25s linear 0s);
 
   background: $secondary-color;
-  bottom: 10px;
   color: white;
+  float: right;
   font-size: 15px;
   line-height: 20px;
+  margin-bottom: 5px;
   padding: 5px 10px;
-  position: absolute;
-  right: 10px;
 
   &:hover {
     background: $primary-color;
