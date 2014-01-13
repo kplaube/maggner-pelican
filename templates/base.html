@@ -24,11 +24,15 @@
     </header>
 
     <section class="content pure-u-3-5">
-        {% block content %}{% endblock %}
+        <div class="l-box">
+            {% block content %}{% endblock %}
+        </div>
     </section>
 
     <aside class="sidebar pure-u-2-5">
-        {% include "includes/sidebar.html" %}
+        <div class="l-box">
+            {% include "includes/sidebar.html" %}
+        </div>
     </aside>
 
     <section class="footer">

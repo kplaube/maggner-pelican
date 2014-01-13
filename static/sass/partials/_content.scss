@@ -8,10 +8,7 @@
 
   padding: 20px;
 
-  img {
-    border: 4px solid #dcdcdc;
-    width: 30%;
-  }
+  img { border: 4px solid #dcdcdc; }
 }
 
 .entry-header { margin-bottom: 20px; }
@@ -82,4 +79,6 @@
 
 @media #{$phone} {
   .full-entry .entry { margin-bottom: 40px; }
+
+  .entry img { width: 30%; }
 }
