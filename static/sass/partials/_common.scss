@@ -43,7 +43,6 @@ p {
   @extend .box;
 
   margin-bottom: 20px;
-  padding: 20px;
   position: relative;
 }
 
@@ -54,6 +53,12 @@ p {
 
 	height: 16px;
 	width: 16px;
+}
+
+.page-title {
+  color: $primary-color;
+  font-size: 26px;
+  margin: 0 0 30px 0;
 }
 
 .secondary {

@@ -19,3 +19,7 @@
     }
   }
 }
+
+@media #{$phone} {
+  .pagination { margin-bottom: 40px; }
+}

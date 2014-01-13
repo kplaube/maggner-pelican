@@ -6,6 +6,8 @@
 .entry {
   @extend .box-content;
 
+  padding: 20px;
+
   img {
     border: 4px solid #dcdcdc;
     width: 30%;
@@ -76,4 +78,8 @@
     background: $primary-color;
     color: white;
   }
+}
+
+@media #{$phone} {
+  .full-entry .entry { margin-bottom: 40px; }
 }

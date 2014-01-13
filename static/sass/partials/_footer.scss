@@ -1,0 +1,15 @@
+.footer {
+  background: #2f4553;
+  border-top: 1px solid #302d2d;
+  color: #979494;
+  width: 100%;
+
+  a { color: white; }
+}
+
+.credits { text-align: right; }
+
+@media #{$phone} {
+  .credits,
+  .copyright { width: 100%; }
+}
