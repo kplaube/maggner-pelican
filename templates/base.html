@@ -12,33 +12,37 @@
     <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 <body>
-<div id="page" class="pure-g-r {% block page_css %}{% endblock %}">
-    <header class="header pure-u-1">
-        <div class="l-box">
-            <h1><a href="{{ SITEURL }}/index.html" title="Página inicial" class="logo">Klaus <span class="secondary">Laube</span></a></h1>
+<div id="page" class="{% block page_css %}{% endblock %}">
+    <header class="pure-g-r header">
+        <div class="pure-u-1">
+            <div class="wrapper">
+                <div class="l-box">
+                    <h1><a href="{{ SITEURL }}/index.html" title="Página inicial" class="logo">Klaus <span class="secondary">Laube</span></a></h1>
 
-            <a href="#" class="ad"><img src="{{ SITEURL }}/theme/img/ad.png" alt="Ad"></a>
+                    <a href="#" class="ad"><img src="{{ SITEURL }}/theme/img/ad.png" alt="Ad"></a>
+                </div>
+            </div>
+
+            {% include "includes/menu.html" %}
         </div>
-
-        {% include "includes/menu.html" %}
     </header>
 
-    <section class="content pure-u-3-5">
-        <div class="l-box">
-            {% block content %}{% endblock %}
-        </div>
-    </section>
+    <div class="pure-g-r wrapper">
+        <section class="content pure-u-17-24">
+            <div class="l-box">
+                {% block content %}{% endblock %}
+            </div>
+        </section>
 
-    <aside class="sidebar pure-u-2-5">
-        <div class="l-box">
-            {% include "includes/sidebar.html" %}
-        </div>
-    </aside>
+        <aside class="sidebar pure-u-7-24">
+            <div class="l-box">
+                {% include "includes/sidebar.html" %}
+            </div>
+        </aside>
+    </div>
 
-    <section class="footer">
-        <div class="l-box">
-            {% include "includes/footer.html" %}
-        </div>
+    <section class="pure-g-r footer">
+        {% include "includes/footer.html" %}
     </section>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

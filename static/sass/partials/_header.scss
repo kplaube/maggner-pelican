@@ -31,3 +31,9 @@
     }
   }
 }
+
+.pure-menu.menu>ul {
+  @extend .wrapper;
+
+  display: block;
+}
