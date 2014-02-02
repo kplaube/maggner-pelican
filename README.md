@@ -12,6 +12,11 @@ It uses some cool technologies, like:
 
 We are still coding, so, feel free to contribute!
 
+Preview
+-------
+
+![home-desktop](https://raw2.github.com/kplaube/maggner-pelican/master/docs/preview-home.png)
+
 Soon, more infos about instalation e configuration.
 
   [Pelican]: http://docs.getpelican.com/
