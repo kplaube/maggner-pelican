@@ -82,3 +82,11 @@ p {
 .secondary {
   color: $secondary-color;
 }
+
+.emoticon {
+  @include text-shadow(1px 1px 1px #dedede);
+
+  color: $primary-color;
+  font-size: 64px;
+  text-align: center;
+}
