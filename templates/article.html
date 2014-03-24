@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}{{ article.title }}{% endblock %}
+{% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock %}
 
 {% block page_css %}full-entry{% endblock %}
 
