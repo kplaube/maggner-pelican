@@ -19,6 +19,23 @@
   text-transform: capitalize;
 }
 
+// Tag cloud
+.tag {
+  @include inline-block;
+}
+
+.tag-0 {
+  font-size: 180%;
+}
+
+.tag-1 {
+  font-size: 160%;
+}
+
+.tag-2 {
+  font-size: 120%;
+}
+
 @media #{$phone} {
   .sidebar { margin-bottom: 40px; }
 }
