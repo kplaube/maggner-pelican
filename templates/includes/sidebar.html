@@ -32,7 +32,7 @@
     <ul>
         {% for tag in tag_cloud|sort %}
             <li class="tag tag-{{ tag.1 }}">
-                <a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a>
+                <a href="{{ tag.0.url }}">{{ tag.0 }}</a>
             </li>
         {% endfor %}
     </ul>
