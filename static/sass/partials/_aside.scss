@@ -19,6 +19,9 @@
   text-transform: capitalize;
 }
 
+// Related posts
+.related-post-title { font-weight: normal; }
+
 // Tag cloud
 .tag {
   @include inline-block;

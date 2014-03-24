@@ -12,6 +12,20 @@
     </section>
 {% endif %}
 
+{% if article and article.related_posts %}
+<section class="module related-posts">
+    <h3 class="title module-title">Related posts</h3>
+
+    <ul>
+        {% for related_post in article.related_posts %}
+            <li class="related-post">
+                <h4 class="related-post-title"><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></h4>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+
 <section class="module tagcloud">
     <h3 class="title module-title">Tags</h3>
 
