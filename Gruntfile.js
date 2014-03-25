@@ -14,6 +14,7 @@ module.exports = function (grunt) {
     compass: {
       options: {
         bundleExec: true,
+          relativeAssets: true,
         cssDir: 'static/css',
         sassDir: 'static/sass',
 				imagesDir: 'static/img'
@@ -22,14 +23,13 @@ module.exports = function (grunt) {
         options: {
           environment: 'development',
           outputStyle: 'expanded',
-          relativeAssets: true,
           raw: 'line_numbers = :true\n'
         }
       },
       dist: {
         options: {
           environment: 'production',
-          outputStyle: 'compact',
+          outputStyle: 'compressed',
           force: true
         }
       }
@@ -46,4 +46,5 @@ module.exports = function (grunt) {
   }
 
   grunt.registerTask('default', ['compass:dev', 'watch']);
+  grunt.registerTask('dist', ['compass:dist']);
 };
