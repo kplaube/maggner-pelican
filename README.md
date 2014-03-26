@@ -43,13 +43,6 @@ SOCIAL = (
 )
 ```
 
-It's important to add these static files to your project:
-
-```
-{{ SITEURL }}/images/opengraph.jpg
-{{ SITEURL }}/images/favicon.ico
-```
-
 Plugins
 -------
 
