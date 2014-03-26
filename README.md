@@ -18,6 +18,29 @@ It uses some cool technologies, like:
 * [Grunt][]
 * [PureCSS][]
 
+
+Installing
+----------
+
+We use *Sass* + *Compass* to write our *CSS*, so first of all, we need to install them all:
+
+```
+$ bundle install
+```
+
+To automate the process of compiling the *Sass*, we use *Grunt*. Once [it is installed][install_grunt], we need to install **grunt-contrib-compass** and **grunt-contrib-watch**, through the following command:
+
+```
+$ npm install
+```
+
+Now, we can start *Grunt* and see the magic happens:
+
+```
+$ grunt
+```
+
+
 Configuration
 -------------
 
@@ -25,6 +48,8 @@ You need to edit your settings and add the following parameters (they aren't req
 
 ```
 SITEDESCRIPTION = 'A brief content for meta description'
+FAVICON_URL = 'The favicon url'
+OG_IMAGE_URL = 'The og:image url' 
 
 LICENSE_URL = 'The license url'
 LICENSE_TITLE = 'A brief summary to print in a\'s title attribute'
@@ -41,12 +66,6 @@ SOCIAL = (
 )
 ```
 
-It's important to add these static files to your project:
-
-```
-{{ SITEURL }}/images/opengraph.jpg
-{{ SITEURL }}/images/favicon.ico
-```
 
 Plugins
 -------
@@ -54,6 +73,7 @@ Plugins
 The theme uses the following plugins:
 
 * [Related posts]
+
 
 Preview
 -------
@@ -79,3 +99,5 @@ Preview
     "See the theme live"
   [Related posts]: https://github.com/getpelican/pelican-plugins/tree/master/related_posts
     "This plugin adds the related_posts variable to the article's context."
+  [install_grunt]: http://gruntjs.com/installing-grunt
+    "Installing Grunt"
