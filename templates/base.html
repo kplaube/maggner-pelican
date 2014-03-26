@@ -8,7 +8,9 @@
     <meta name="robots" content="{% block robots %}index,follow{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/x-icon" href="{{ SITEURL }}/images/favicon.ico">
+    {% if FAVICON_URL %}
+        <link rel="icon" type="image/x-icon" href="{{ FAVICON_URL }}">
+    {% endif %}
 
     <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} &raquo; Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" />
     <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{{ page_name }}{% if articles_page and articles_page.number != 1 %}{{ articles_page.number }}{% endif %}.html{% endblock %}">
@@ -16,8 +18,10 @@
     {% if FB_ADMINS %}
         <meta property="fb:admins" content="{{ FB_ADMINS }}">
     {% endif %}
+    {% if OG_IMAGE_URL %}
+        <meta property="og:image" content="{{ OG_IMAGE_URL }}">
+    {% endif %}
     <meta property="og:site_name" content="{{ SITENAME }}">
-    <meta property="og:image" content="{{ SITEURL }}/images/opengraph.jpg">
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
@@ -29,9 +33,9 @@
         <div class="pure-u-1">
             <div class="wrapper">
                 <div class="l-box">
-                    <h1><a href="{{ SITEURL }}/index.html" title="Página inicial" class="logo">Klaus <span class="secondary">Laube</span></a></h1>
+                    <h1><a href="{{ SITEURL }}/index.html" title="Home page" class="logo">Klaus <span class="secondary">Laube</span></a></h1>
 
-                    <a href="#" class="ad"><img src="{{ SITEURL }}/theme/img/ad.png" alt="Ad"></a>
+                    <!--<a href="#" class="ad"><img src="{{ SITEURL }}/theme/img/ad.png" alt="Ad"></a>-->
                 </div>
             </div>
 
