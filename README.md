@@ -18,6 +18,29 @@ It uses some cool technologies, like:
 * [Grunt][]
 * [PureCSS][]
 
+
+Installing
+----------
+
+We use *Sass* + *Compass* to write our *CSS*, so first of all, we need to install them all:
+
+```
+$ bundle install
+```
+
+To automate the process of compiling the *Sass*, we use *Grunt*. Once [it is installed][install_grunt], we need to install **grunt-contrib-compass** and **grunt-contrib-watch**, through the following command:
+
+```
+$ npm install
+```
+
+Now, we can start *Grunt* and see the magic happens:
+
+```
+$ grunt
+```
+
+
 Configuration
 -------------
 
@@ -43,12 +66,14 @@ SOCIAL = (
 )
 ```
 
+
 Plugins
 -------
 
 The theme uses the following plugins:
 
 * [Related posts]
+
 
 Preview
 -------
@@ -74,3 +99,5 @@ Preview
     "See the theme live"
   [Related posts]: https://github.com/getpelican/pelican-plugins/tree/master/related_posts
     "This plugin adds the related_posts variable to the article's context."
+  [install_grunt]: http://gruntjs.com/installing-grunt
+    "Installing Grunt"
