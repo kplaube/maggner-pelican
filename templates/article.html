@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
 {% block title %}{{ article.title }}{% endblock %}
-{% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock %}
-{% block description %}{{ article.summary|striptags|truncate(157) }}{% endblock %}
+{% block canonical_url %}{{ article.meta.canonical }}{% endblock %}
+{% block description %}{{ article.meta.description }}{% endblock %}
+{% block robots %}{{ article.meta.robots }}{% endblock %}
 
 {% block page_css %}full-entry{% endblock %}
 

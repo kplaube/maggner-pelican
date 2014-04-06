@@ -6,6 +6,9 @@
     <title>{% block title %}{{ SITESUBTITLE }}{% endblock %} | {% block sitename %}{{ SITENAME }}{% endblock %}</title>
     <meta name="description" content="{% block description %}{{ SITEDESCRIPTION }}{% endblock %}">
     <meta name="robots" content="{% block robots %}index,follow{% endblock %}">
+    {% if article and article.meta %}
+        <meta name="keywords" content="{{ article.meta.keywords }}">
+    {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% if FAVICON_URL %}
