@@ -73,6 +73,7 @@ Plugins
 The theme uses the following plugins:
 
 * [Related posts]
+* [Better Meta]
 
 
 Preview
@@ -98,6 +99,8 @@ Preview
   [blog]: http://klauslaube.com.br
     "See the theme live"
   [Related posts]: https://github.com/getpelican/pelican-plugins/tree/master/related_posts
-    "This plugin adds the related_posts variable to the article's context."
+    "This plugin adds the related_posts variable to the article's context"
   [install_grunt]: http://gruntjs.com/installing-grunt
     "Installing Grunt"
+  [Better Meta]: https://github.com/kplaube/better_meta
+    "This plugin addds the meta variable to the article's context"
