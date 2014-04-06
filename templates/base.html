@@ -2,14 +2,27 @@
 <html class="no-js">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% block title %}{{ SITESUBTITLE }}{% endblock %} | {% block sitename %}{{ SITENAME }}{% endblock %}</title>
+
+    <meta name="author" content="{{ AUTHOR }}">
     <meta name="description" content="{% block description %}{{ SITEDESCRIPTION }}{% endblock %}">
     <meta name="robots" content="{% block robots %}index,follow{% endblock %}">
     {% if article and article.meta %}
         <meta name="keywords" content="{{ article.meta.keywords }}">
+        <meta property="og:title" content="{{ article.meta.og_title }}">
+        <meta property="og:description" content="{{ article.meta.og_description }}">
+        <meta property="og:url" content="{{ article.meta.og_url }}">
+        <meta property="og:image" content="{{ article.meta.og_image }}">
+    {% elif OG_IMAGE_URL %}
+        <meta property="og:image" content="{{ OG_IMAGE_URL }}">
     {% endif %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:type" content="website">
+    {% if FB_ADMINS %}
+        <meta property="fb:admins" content="{{ FB_ADMINS }}">
+    {% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% if FAVICON_URL %}
         <link rel="icon" type="image/x-icon" href="{{ FAVICON_URL }}">
@@ -18,17 +31,8 @@
     <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} &raquo; Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" />
     <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{{ page_name }}{% if articles_page and articles_page.number != 1 %}{{ articles_page.number }}{% endif %}.html{% endblock %}">
 
-    {% if FB_ADMINS %}
-        <meta property="fb:admins" content="{{ FB_ADMINS }}">
-    {% endif %}
-    {% if OG_IMAGE_URL %}
-        <meta property="og:image" content="{{ OG_IMAGE_URL }}">
-    {% endif %}
-    <meta property="og:site_name" content="{{ SITENAME }}">
-
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
-    <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 <body>
 <div id="page" class="{% block page_css %}{% endblock %}">
@@ -41,8 +45,6 @@
                             class="logo">{{ sitename[0] }}
                             {% if sitename|length > 1 %}<span class="secondary">{{ sitename[1:]|join(' ') }}</span>{% endif %}
                     </a>
-
-                    <!--<a href="#" class="ad"><img src="{{ SITEURL }}/theme/img/ad.png" alt="Ad"></a>-->
                 </div>
             </div>
 
@@ -67,13 +69,6 @@
     <section class="pure-g-r footer">
         {% include "includes/footer.html" %}
     </section>
-
-    <!--
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ SITEURL }}/theme/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-
-    <script src="{{ SITEURL }}/theme/js/main.js" async="true"></script>
-    -->
 
     {% include "includes/analytics.html" %}
 
