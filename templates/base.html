@@ -37,10 +37,10 @@
             <div class="wrapper">
                 <div class="l-box">
                     {% set sitename = SITENAME.split() %}
-                    <h1><a href="{{ SITEURL }}/index.html" title="Home page"
+                    <a href="{{ SITEURL }}/index.html" title="Home page"
                             class="logo">{{ sitename[0] }}
                             {% if sitename|length > 1 %}<span class="secondary">{{ sitename[1:]|join(' ') }}</span>{% endif %}
-                    </a></h1>
+                    </a>
 
                     <!--<a href="#" class="ad"><img src="{{ SITEURL }}/theme/img/ad.png" alt="Ad"></a>-->
                 </div>
