@@ -5,9 +5,11 @@
   width: 100%;
 
   a { color: white; }
+
+  p { margin: 0; }
 }
 
-.credits { text-align: right; }
+.credits p { text-align: right; }
 
 @media #{$phone} {
   .credits,
