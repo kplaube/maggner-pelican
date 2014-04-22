@@ -49,7 +49,7 @@ You need to edit your settings and add the following parameters (they aren't req
 ```
 SITEDESCRIPTION = 'A brief content for meta description'
 FAVICON_URL = 'The favicon url'
-OG_IMAGE_URL = 'The og:image url' 
+DEFAULT_OG_IMAGE = 'The og:image url' 
 
 LICENSE_URL = 'The license url'
 LICENSE_TITLE = 'A brief summary to print in a\'s title attribute'

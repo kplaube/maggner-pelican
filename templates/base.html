@@ -13,8 +13,8 @@
         <meta property="og:description" content="{{ article.meta.og_description }}">
         <meta property="og:url" content="{{ article.meta.og_url }}">
         <meta property="og:image" content="{{ article.meta.og_image }}">
-    {% elif OG_IMAGE_URL %}
-        <meta property="og:image" content="{{ OG_IMAGE_URL }}">
+    {% elif DEFAULT_OG_IMAGE %}
+        <meta property="og:image" content="{{ DEFAULT_OG_IMAGE }}">
     {% endif %}
     <meta property="og:site_name" content="{{ SITENAME }}">
     <meta property="og:type" content="website">
