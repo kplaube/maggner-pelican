@@ -72,8 +72,9 @@ Plugins
 
 The theme uses the following plugins:
 
-* [Related posts]
 * [Better Meta]
+* [Liquid-style Tags]
+* [Related posts]
 
 
 Preview
@@ -104,3 +105,5 @@ Preview
     "Installing Grunt"
   [Better Meta]: https://github.com/kplaube/better_meta
     "This plugin addds the meta variable to the article's context"
+  [Liquid-style Tags]: https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags
+    "This plugin allows liquid-style tags to be inserted into markdown within Pelican documents"
