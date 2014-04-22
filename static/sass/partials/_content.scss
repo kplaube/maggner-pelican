@@ -77,6 +77,11 @@
   }
 }
 
+.social-buttons {
+  border-bottom: 2px solid #eaedee;
+  padding: 10px 0 20px 0;
+}
+
 .social-button {
   @include inline-block;
 
