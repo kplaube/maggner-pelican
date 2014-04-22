@@ -8,9 +8,10 @@
         {% endif %}
     {% endif %}
 
-    <a href="{{ SITEURL }}/{{ page_name }}.html" title="Page 1">1</a>
-    {% for page_number in range(2, articles_paginator.num_pages + 1) %}
-        <a href="{{ SITEURL }}/{{ page_name }}{{ page_number }}.html" title="Page {{ page_number }}">{{ page_number }}</a>
+    {% for page_number in range(1, articles_paginator.num_pages + 1) %}
+    <a href="{{ SITEURL }}/{{ page_name }}{% if page_number > 1 %}{{ page_number }}{% endif %}.html"
+        title="Page {{ page_number }}"
+        {% if articles_page.number == page_number %}class="actual-page"{% endif %}>{{ page_number }}</a>
     {% endfor %}
 
     {% if articles_page.has_next() %}

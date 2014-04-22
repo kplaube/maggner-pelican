@@ -13,6 +13,8 @@
     padding: 5px 10px;
 
     &:first-child { margin-left: 0; }
+
+    &.actual-page,
     &:hover {
       background: $primary-color;
       color: white;
