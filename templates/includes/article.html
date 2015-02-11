@@ -23,7 +23,7 @@
       <span class="meta entry-tags">
         <span class="icons icons-category"></span>
         {% for tag in article.tags %}
-          <a href="{{ tag.url }}" title="Read more with the label {{ tag }}" class="meta-link">{{ tag }}</a> 
+          <a href="{{ SITEURL }}/{{ tag.url }}" title="Read more with the label {{ tag }}" class="meta-link">{{ tag }}</a> 
         {% endfor %}
       </span>
       {% endif %}
