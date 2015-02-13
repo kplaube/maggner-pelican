@@ -2,7 +2,7 @@
 
     <header class="entry-header">
         <h1 class="entry-title">
-			<a href="{{ SITEURL }}/{{ article.url }}" title="Read more" class="entry-title-link">
+      <a href="{{ SITEURL }}/{{ article.url }}" title="Read more" class="entry-title-link">
                 {{ article.title }}</a>
         </h1>
 
@@ -10,25 +10,25 @@
             <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
         </div>
 
-		{% if article.author and article.tags %}
-		<div class="entry-meta">
-			{% if article.author %}
-			<span class="meta entry-author">
-				<span class="icons icons-author"></span>
-				<a href="{{ SITEURL }}/{{ article.author.url }}" title="Read more posts from {{ article.author }}" class="meta-link">{{ article.author }}</a>
-			</span>
-			{% endif %}
+    {% if article.author and article.tags %}
+    <div class="entry-meta">
+      {% if article.author %}
+      <span class="meta entry-author">
+        <span class="icons icons-author"></span>
+        <a href="{{ SITEURL }}/{{ article.author.url }}" title="Read more posts from {{ article.author }}" class="meta-link">{{ article.author }}</a>
+      </span>
+      {% endif %}
 
-			{% if article.tags %}
-			<span class="meta entry-tags">
-				<span class="icons icons-category"></span>
-				{% for tag in article.tags %}
-					<a href="{{ tag.url }}" title="Read more with the label {{ tag }}" class="meta-link">{{ tag }}</a> 
-				{% endfor %}
-			</span>
-			{% endif %}
-		</div>
-		{% endif %}
+      {% if article.tags %}
+      <span class="meta entry-tags">
+        <span class="icons icons-category"></span>
+        {% for tag in article.tags %}
+          <a href="{{ SITEURL }}/{{ tag.url }}" title="Read more with the label {{ tag }}" class="meta-link">{{ tag }}</a> 
+        {% endfor %}
+      </span>
+      {% endif %}
+    </div>
+    {% endif %}
     </header>
 
     <div class="entry-content">
