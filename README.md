@@ -3,9 +3,7 @@ maggner-pelican
 
 **maggner-pelican** is a simple (and responsive) theme built for [Pelican][], based on [Maggner][] theme, created by [Templateify][].
 
-You can check it live in my [blog][].
-
-We are still coding, so, feel free to contribute!
+Feel free to contribute!
 
 
 Requirements
@@ -80,7 +78,7 @@ The theme uses the following plugins:
 Preview
 -------
 
-![home-desktop](https://raw2.github.com/kplaube/maggner-pelican/master/docs/preview-home.png)
+![preview](https://raw.githubusercontent.com/kplaube/maggner-pelican/master/docs/preview-home.png)
 
 
   [Pelican]: http://docs.getpelican.com/
